@@ -24,8 +24,6 @@ public class ThreadStopMainV4 {
 	}
 
 	static class MyTask implements Runnable {
-		volatile boolean runFlag = true; // 스레드는 volatile 키워드에 의해 항상 최신 값을 읽어오게 된다.
-
 		@Override
 		public void run() {
 			// 인터럽트 상태가 true이면 true를 반환하고 인터럽트 상태를 false로 바꿔줌

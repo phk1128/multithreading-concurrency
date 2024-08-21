@@ -31,6 +31,7 @@ public class ThreadStopMainV3 {
 
 		sleep(100);
 		log("작업 중단 지시 - thread.interrupt()"); thread.interrupt();
+		log("work 스레드 상태 = " + thread.getState());
 		log("work 스레드 인터럽트 상태1 = " + thread.isInterrupted());
 
 	}

@@ -6,7 +6,8 @@ import static util.ThreadUtils.*;
 public class BankMain {
 
 	public static void main(String[] args) throws InterruptedException {
-		BankAccount account = new BankAccountV1(1000); // 잔고 1000원
+		// BankAccount account = new BankAccountV1(1000); // 잔고 1000원
+		BankAccountV2 account = new BankAccountV2(1000);
 
 		Thread t1 = new Thread(new WithdrawTask(account, 800), "t1");// 800원 출금
 		Thread t2 = new Thread(new WithdrawTask(account, 800), "t2");// 800원 출금
